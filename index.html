@@ -26,25 +26,27 @@
              min-height: 500px; /* Start with a minimum height */
         }
 
-        /* Keyframes for the pulsing glow animation */
+        /* Keyframes for the pulsing glow animation (smoother transition) */
         @keyframes pulse-glow {
             0%, 100% {
-                box-shadow: 0 0 15px 5px rgba(255, 255, 255, 0.3),
-                            0 0 5px 2px rgba(255, 255, 255, 0.1) inset;
+                /* Slightly less intense base glow */
+                box-shadow: 0 0 12px 4px rgba(255, 255, 255, 0.25),
+                            0 0 4px 1px rgba(255, 255, 255, 0.1) inset;
             }
             50% {
-                box-shadow: 0 0 25px 8px rgba(255, 255, 255, 0.4), /* Brighter glow */
-                            0 0 7px 3px rgba(255, 255, 255, 0.15) inset; /* Slightly brighter inner */
+                /* Slightly less intense peak glow */
+                box-shadow: 0 0 20px 7px rgba(255, 255, 255, 0.35),
+                            0 0 6px 2px rgba(255, 255, 255, 0.15) inset;
             }
         }
 
         /* White glow effect with animation */
         .glow-white {
             /* Base glow */
-            box-shadow: 0 0 15px 5px rgba(255, 255, 255, 0.3),
-                        0 0 5px 2px rgba(255, 255, 255, 0.1) inset;
-            /* Apply the animation */
-            animation: pulse-glow 4s infinite ease-in-out;
+            box-shadow: 0 0 12px 4px rgba(255, 255, 255, 0.25),
+                        0 0 4px 1px rgba(255, 255, 255, 0.1) inset;
+            /* Apply the animation with linear timing */
+            animation: pulse-glow 4s infinite linear; /* Changed ease-in-out to linear */
             /* Ensure background is pure black */
             background-color: #000000;
         }
