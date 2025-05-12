@@ -3,30 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Form Page</title>
+    <title>Athing.net</title>
     <style>
-        /* Optional: Basic styling to center content and add some padding */
         body {
             font-family: sans-serif;
             padding: 20px;
             display: flex;
             flex-direction: column;
             align-items: center;
+            background-color: black; /* Set background to black */
+            color: white;           /* Set default text color to white for contrast */
+            min-height: 100vh;      /* Ensure body takes full viewport height */
+            margin: 0;              /* Remove default body margin */
         }
         .form-container {
             width: 100%;
             max-width: 800px; /* Adjust max-width as needed */
             margin-top: 20px;
+            /* Note: The background *inside* the form embed itself
+               is controlled by Fillout and might remain white/light. */
         }
         h1 {
             text-align: center;
             margin-bottom: 30px;
+             /* Color is inherited from body, no change needed unless you want a different color */
         }
     </style>
 </head>
 <body>
 
-    <h1>Please Complete the Form</h1>
+    <h1>If you are having issues report them below</h1>
 
     <div class="form-container">
         <div style="width:100%;height:500px;" data-fillout-id="i2awJ2kqRHus" data-fillout-embed-type="standard" data-fillout-inherit-parameters data-fillout-dynamic-resize></div>
